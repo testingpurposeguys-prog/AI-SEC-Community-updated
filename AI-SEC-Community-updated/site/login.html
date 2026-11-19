@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — AI-SEC Community</title>
+  <meta name="description" content="Login to manage your AI-SEC Community meetup registrations, volunteering, and event preferences." />
+
+  <link rel="canonical" href="https://aisec.community/login" />
+
+  <!-- Open Graph / social cards -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Login — AI-SEC Community" />
+  <meta property="og:description" content="Sign in to the AI-SEC Community portal." />
+  <meta property="og:image" content="assets/images/logo.png" />
+  <meta property="og:url" content="https://aisec.community/login" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Login — AI-SEC Community" />
+  <meta name="twitter:description" content="Sign in to the AI-SEC Community portal." />
+  <meta name="twitter:image" content="assets/images/logo.png" />
+
+  <link rel="icon" type="image/svg+xml" href="/Images/logo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <script src="js/site-chrome.js"></script>
+</head>
+<body>
+
+  <site-header></site-header>
+
+  <main>
+    <section class="section" aria-labelledby="login-title">
+      <div class="container">
+        <div class="section__header" data-animate="fade-up">
+          <h1 class="section__title" id="login-title">Sign in to AI-SEC Community</h1>
+          <p class="section__subtitle">Access meetup registrations, volunteering, and organizer tools.</p>
+        </div>
+
+        <article class="card" data-animate="fade-up" style="max-width: 480px; margin-inline: auto;">
+          <div class="card__body">
+            <form class="auth-form" action="#" method="post" autocomplete="on">
+              <div class="form-group">
+                <label class="form-label" for="login-email">Email address</label>
+                <input class="form-input" type="email" id="login-email" name="email" placeholder="you@example.com" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="login-password">Password</label>
+                <input class="form-input" type="password" id="login-password" name="password" placeholder="Your password" required />
+              </div>
+
+              <div class="form-group auth-form__row" style="display:flex; justify-content:space-between; align-items:center;">
+                <label class="form-label" style="display:flex; align-items:center; gap:0.5rem;">
+                  <input type="checkbox" name="remember" />
+                  <span>Remember me on this device</span>
+                </label>
+                <a href="#" class="icon-link">Forgot password?</a>
+              </div>
+
+              <button class="btn btn-primary form-submit" type="submit">Sign In</button>
+
+              <p class="card__text" style="margin-top: 1rem;">
+                New to AI-SEC Community?
+                <a href="register.html">Create an account</a>.
+              </p>
+            </form>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/stats-counter.js" defer></script>
+  <script src="js/event-filters.js" defer></script>
+  <script src="js/forms.js" defer></script>
+  <script src="js/auth-guard.js" defer></script>
+</body>
+</html>

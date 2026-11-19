@@ -1,0 +1,100 @@
+/* Hyderabad chapter — past events archive (scoped to .hyd-archive) */
+.hyd-archive{
+  --h-bg: var(--color-bg, #1a1a2e);
+  --h-card: var(--color-surface, #25244a);
+  --h-line: var(--color-border, #34335a);
+  --h-tx: var(--color-text, #f3f2fb);
+  --h-mut: var(--color-text-secondary, #a7a5c6);
+  --h-pu: var(--color-primary, #9930f6);
+  --h-pu2: #c084fc;
+  color: var(--h-tx);
+  position: relative;
+}
+[data-theme="light"] .hyd-archive{ --h-pu2: #7e22ce; }
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]) .hyd-archive{ --h-pu2:#7e22ce; } }
+
+.hyd-archive *{ box-sizing: border-box; }
+
+.hyd-event{ position: relative; padding: 64px 0; border-top: 1px solid var(--h-line); scroll-margin-top: 150px; overflow: hidden; }
+.hyd-event:first-child{ border-top: 0; }
+.hyd-mark{
+  position: absolute; right: 0; top: 24px; z-index: 0; pointer-events: none;
+  font: 900 clamp(70px,14vw,170px)/1 Poppins, sans-serif; color: transparent;
+  -webkit-text-stroke: 1px var(--h-line); opacity: .7;
+}
+.hyd-event > *:not(.hyd-mark){ position: relative; z-index: 1; }
+
+.hyd-tag{ display:inline-block; font: 500 12px 'JetBrains Mono', ui-monospace, monospace; letter-spacing:.08em; text-transform:uppercase; padding:6px 14px; border-radius:99px; margin:0 8px 14px 0; }
+.hyd-tag--a{ border:1px solid var(--h-pu); color: var(--h-pu2); }
+.hyd-tag--b{ background: var(--h-card); color: var(--h-mut); border:1px solid var(--h-line); }
+.hyd-event h2{ font: 800 clamp(28px,4.5vw,44px)/1.1 Poppins, sans-serif; letter-spacing:-.02em; margin:0; }
+.hyd-sub{ color: var(--h-mut); margin: 6px 0 0; }
+
+.hyd-cover{ margin-top: 28px; border-radius: 18px; overflow: hidden; border: 1px solid var(--h-pu); background: var(--h-card); }
+.hyd-cover img{ display:block; width:100%; height:auto; cursor: zoom-in; transition: transform .6s; }
+.hyd-cover:hover img{ transform: scale(1.03); }
+
+.hyd-event h3.hyd-h3{
+  display:flex; align-items:center; gap:10px;
+  font: 700 19px/1.3 Poppins, sans-serif; margin: 44px 0 20px; padding-bottom: 10px; border-bottom: 1px solid var(--h-line);
+}
+.hyd-h3::before{ content:""; flex:none; width:10px; height:10px; border-radius:50%; background: var(--h-pu); box-shadow: 0 0 12px var(--h-pu); }
+
+.hyd-grid{ display:grid; gap:24px; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); }
+.hyd-grid--three{ grid-template-columns: repeat(auto-fill, minmax(290px,1fr)); }
+.hyd-grid--cap{ grid-template-columns: repeat(auto-fill, minmax(280px,360px)); }
+
+.hyd-card{
+  background: var(--h-card); border:1px solid var(--h-line); border-radius:18px; padding:30px 20px; text-align:center;
+  transform: perspective(700px) rotateX(var(--rx,0)) rotateY(var(--ry,0));
+  transition: transform .15s, border-color .2s;
+}
+.hyd-card:hover{ border-color: var(--h-pu); }
+.hyd-av{
+  position:relative; overflow:hidden; width:100px; height:100px; border-radius:50%; margin:0 auto 16px;
+  display:grid; place-items:center; font: 700 32px Poppins, sans-serif; color:#fff;
+  background: linear-gradient(135deg, var(--h-pu), #ec4899);
+  box-shadow: 0 0 0 3px var(--h-card), 0 0 0 6px var(--h-pu); transition: box-shadow .3s;
+}
+.hyd-card:hover .hyd-av{ box-shadow: 0 0 0 3px var(--h-card), 0 0 0 6px #ec4899, 0 0 30px #9333ea88; }
+.hyd-av img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.hyd-card h4{ font: 700 20px/1.25 Poppins, sans-serif; margin:0; }
+.hyd-role{
+  display:inline-block; font: 500 12px 'JetBrains Mono', ui-monospace, monospace; letter-spacing:.1em; text-transform:uppercase;
+  border:1px solid var(--h-pu); color: var(--h-pu2); border-radius:99px; padding:5px 12px; margin:12px 0;
+}
+.hyd-role--q{ border-color: var(--h-line); color: var(--h-mut); }
+.hyd-li{ display:block; color: var(--h-mut); font-size:14px; }
+.hyd-li b{ margin-right:6px; }
+.hyd-talk{ margin: 12px 0 0; font-size:16px; line-height:1.5; }
+
+.hyd-photos{ columns: 2 280px; column-gap: 20px; }
+.hyd-photos figure{ break-inside: avoid; margin: 0 0 20px; background: var(--h-card); border:1px solid var(--h-line); border-radius:14px; padding:8px; }
+.hyd-photos .hyd-box{ border-radius:8px; overflow:hidden; background: linear-gradient(135deg,#3b2a6b,#1f2a5a); min-height:140px; }
+.hyd-photos img{ display:block; width:100%; height:auto; cursor: zoom-in; transition: transform .6s; }
+.hyd-photos figure:hover img{ transform: scale(1.05); }
+.hyd-photos figcaption{ font-size:12px; color: var(--h-mut); padding: 6px 4px 0; }
+
+.hyd-vid{ border:1px solid var(--h-pu); border-radius:18px; overflow:hidden; background: var(--h-card); }
+.hyd-vid a{ display:block; }
+.hyd-vid img{ display:block; width:100%; }
+.hyd-vid p{ padding:16px 22px; color: var(--h-mut); margin:0; }
+
+.hyd-reveal{ opacity:0; transform: translateY(28px); transition: opacity .6s, transform .6s; }
+.hyd-reveal.in{ opacity:1; transform:none; }
+.hyd-card.hyd-reveal.in{ transition: opacity .6s, transform .15s, border-color .2s; }
+
+#hyd-lb{ position:fixed; inset:0; background:#000d; display:none; place-items:center; z-index:1000; cursor:zoom-out; padding:20px; }
+#hyd-lb.on{ display:grid; }
+#hyd-lb img{ max-width:100%; max-height:92vh; border-radius:12px; }
+
+@media (prefers-reduced-motion: reduce){
+  .hyd-reveal{ opacity:1; transform:none; transition:none; }
+  .hyd-card{ transform:none; }
+  .hyd-cover img, .hyd-photos img{ transition:none; }
+}
+
+/* Shared by the Chennai archive */
+.hyd-grid--four{ grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); }
+a.hyd-li{ transition: color .2s; }
+a.hyd-li:hover{ color: var(--h-pu2); }

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pune Chapter — Coming Soon | AI-SEC Community</title>
+  <meta name="description" content="AI-SEC Community is starting a chapter in Pune. Join as a founding member, offer a venue, speak or volunteer, and help shape the first AI security meetups in the city." />
+  <link rel="canonical" href="https://aisec.community/Pune%20Past%20Event.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pune Chapter — AI-SEC Community" />
+  <meta property="og:description" content="AI-SEC Community is starting a chapter in Pune. Join as a founding member, host, speaker or volunteer." />
+  <meta property="og:image" content="assets/images/logo.png" />
+  <meta property="og:url" content="https://aisec.community/Pune%20Past%20Event.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pune Chapter — AI-SEC Community" />
+  <meta name="twitter:description" content="AI-SEC Community is starting a chapter in Pune. Join as a founding member, host, speaker or volunteer." />
+  <meta name="twitter:image" content="assets/images/logo.png" />
+
+  <link rel="icon" type="image/svg+xml" href="/Images/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <style>
+    /* Smooth jump when clicking October / September / August */
+    html { scroll-behavior: smooth; }
+
+    .archive-nav { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+    .archive-nav a {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.5rem 1rem; border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.15);
+      font-family: 'JetBrains Mono', monospace; font-size: 0.85rem;
+      text-decoration: none;
+    }
+
+    .month-block { padding-top: 1rem; scroll-margin-top: 90px; }
+    .month-block + .month-block {
+      margin-top: 3.5rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 3.5rem;
+    }
+    .month-block__header { margin-bottom: 2rem; }
+    .month-block__meta { display: flex; gap: 0.6rem; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; }
+
+    .event-group { margin-bottom: 2.5rem; }
+    .event-group:last-child { margin-bottom: 0; }
+    .event-group__header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.25rem; }
+    .event-group__title { font-family: 'Poppins', sans-serif; font-size: 1.05rem; font-weight: 700; margin: 0; }
+    .badge--muted { opacity: 0.75; }
+
+    .grid-2c { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3c { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-4c { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    @media (max-width: 1024px) {
+      .grid-3c, .grid-4c { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .grid-2c, .grid-3c, .grid-4c { grid-template-columns: 1fr; }
+    }
+
+    .highlight-photo {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 520px;
+      object-fit: contain;
+      border-radius: var(--radius-md, 10px);
+    }
+    .highlight-card { padding: 0; overflow: hidden; }
+    .highlight-card .card__body { padding: 0.75rem 0.9rem; }
+    .highlight-card .card__text { margin: 0; font-size: 0.85rem; opacity: 0.75; }
+
+    .highlights-grid { display: block; column-count: 2; column-gap: 1.5rem; }
+    .highlights-grid .highlight-card {
+      display: inline-block;
+      width: 100%;
+      break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+      margin: 0 0 1.5rem;
+    }
+    @media (max-width: 640px) {
+      .highlights-grid { column-count: 1; }
+    }
+
+    /* Responsive 16:9 video embed */
+    .video-embed__frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+    .video-embed__frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-embed__link { margin-left: 0.5rem; }
+  </style>
+    <link rel="stylesheet" href="css/chapter-pages.css" />
+  <link rel="stylesheet" href="css/chapter-extra.css" />
+  <script>document.documentElement.classList.add("cp-js");</script>
+  <script src="js/site-chrome.js"></script>
+  <script>try{if(!localStorage.getItem("ai-sec-theme"))document.documentElement.setAttribute("data-theme","light")}catch(e){}</script>
+  <link rel="stylesheet" href="css/fit-wide.css" />
+</head>
+<body>
+
+  <site-header></site-header>
+
+  <main>
+    <section class="chapter-hero pune-hero" aria-labelledby="past-hero-title" data-ticker-label="We are looking for:" data-ticker-words="Members|Venue hosts|Speakers|Volunteers">
+      <div data-network-animation aria-hidden="true"></div>
+      <span class="chapter-hero__orb chapter-hero__orb--a" aria-hidden="true"></span>
+      <span class="chapter-hero__orb chapter-hero__orb--b" aria-hidden="true"></span>
+      <div class="pune-hero__art" aria-hidden="true">
+        <svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg">
+          <rect class="fillish" x="40" y="107" width="320" height="63"/>
+          <rect class="fillish" x="118" y="78" width="40" height="92"/><rect class="fillish" x="242" y="78" width="40" height="92"/>
+          <path class="ln" style="--len:560;--d:.0;stroke-opacity:.22" d="M0 128L40 95l35 27 45-42 45 38 45-30 40 37 50-25 40 28 60-23"/>
+          <path class="ln ground" style="--len:420;--d:.1" d="M0 170H400"/>
+          <path class="ln" style="--len:420;--d:.3" d="M40 170V107H360V170"/>
+          <path class="ln" style="--len:640;--d:.6" d="M40 107V98H49V107M56 107V98H65V107M72 107V98H81V107M88 107V98H97V107M104 107V98H113V107M120 107V98H129V107M136 107V98H145V107M152 107V98H161V107M168 107V98H177V107M184 107V98H193V107M200 107V98H209V107M216 107V98H225V107M232 107V98H241V107M248 107V98H257V107M264 107V98H273V107M280 107V98H289V107M296 107V98H305V107M312 107V98H321V107M328 107V98H337V107M344 107V98H353V107"/>
+          <path class="ln" style="--len:260;--d:.8" d="M118 170V78H158V170M242 170V78H282V170"/>
+          <path class="ln" style="--len:180;--d:1" d="M118 78V70H125V78M129 78V70H136V78M140 78V70H147V78M151 78V70H158V78M242 78V70H249V78M253 78V70H260V78M264 78V70H271V78M275 78V70H282V78"/>
+          <path class="ln" style="--len:300;--d:1.1" d="M166 170V116q34-40 68 0V170"/>
+          <path class="ln" style="--len:260;--d:1.3" d="M172 84V62H228V84M172 62q28-24 56 0"/>
+          <path class="ln" style="--len:200;--d:1.5" d="M200 24V62M200 106V170M184 112V170M216 112V170"/>
+          <rect class="win" style="--w:0" x="178" y="68" width="6" height="10" rx="1"/><rect class="win" style="--w:1" x="190" y="68" width="6" height="10" rx="1"/>
+          <rect class="win" style="--w:2" x="202" y="68" width="6" height="10" rx="1"/><rect class="win" style="--w:3" x="214" y="68" width="6" height="10" rx="1"/>
+          <rect class="win" style="--w:1.5" x="134" y="96" width="5" height="12" rx="1"/><rect class="win" style="--w:2.5" x="258" y="96" width="5" height="12" rx="1"/>
+          <path class="flag" d="M200 24l22 7-22 7z" style="animation-delay:2s"/>
+        </svg>
+      </div>
+      <div class="container chapter-hero__inner">
+        <a class="chapter-hero__back" href="Chapters.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>All chapters</a>
+        <p class="chapter-hero__eyebrow"><span class="pulse-dot" aria-hidden="true"></span>Chapter forming · Pune, Maharashtra</p>
+        <h1 class="chapter-hero__title" id="past-hero-title"><span class="line"><span>Pune</span></span><span class="line grad"><span>Chapter</span></span></h1>
+        <p class="chapter-hero__lead">Pune&rsquo;s AI security practitioners are next. We are gathering the first members, hosts and speakers now, and you can help decide how this chapter runs.</p>
+        <ul class="pune-status" aria-label="Chapter status">
+          <li class="on"><span class="pulse-dot" aria-hidden="true"></span>Forming now</li>
+          <li>First meetup: date to be announced</li>
+          <li>Beginners to experts welcome</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="roles-title">
+      <div class="container">
+        <div class="pune-head pune-reveal">
+          <span class="badge badge--accent">Founding members</span>
+          <h2 id="roles-title">Four ways to help start Pune</h2>
+          <p>A chapter runs on its members. Pick the role that fits you. You can change it later.</p>
+        </div>
+        <div class="pune-roles">
+          <a class="pune-role pune-reveal" href="get-involved.html">
+            <span class="pune-role__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <h3>Join as a founding member</h3>
+            <p>Be in the room for the first meetups and help choose the topics we cover.</p>
+            <span class="pune-role__go">Add your name<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="pune-role pune-reveal" href="get-involved.html">
+            <span class="pune-role__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M9 10h.01M15 10h.01"/></svg></span>
+            <h3>Host a meetup</h3>
+            <p>Offer a room and a welcome. We will plan the programme with you.</p>
+            <span class="pune-role__go">Offer a space<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="pune-role pune-reveal" href="https://docs.google.com/forms/d/1t1_HVS2mvc0FH7D2Aaojzd-439_r5deLL1He_07ri8M" target="_blank" rel="noopener">
+            <span class="pune-role__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v4M8 22h8"/></svg></span>
+            <h3>Speak or run a workshop</h3>
+            <p>Share something you built, broke or defended. Talks, demos and hands-on sessions all work.</p>
+            <span class="pune-role__go">Submit a talk<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="pune-role pune-reveal" href="get-involved.html">
+            <span class="pune-role__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg></span>
+            <h3>Volunteer</h3>
+            <p>Help with registration, outreach and keeping the room welcoming, on the day and in between.</p>
+            <span class="pune-role__go">Lend a hand<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint" aria-labelledby="road-title">
+      <div class="container">
+        <div class="pune-head pune-reveal">
+          <span class="badge">The plan</span>
+          <h2 id="road-title">From first hello to first meetup</h2>
+          <p>There is no fixed date yet. This is the order we will follow.</p>
+        </div>
+        <ol class="pune-road">
+          <li class="pune-step pune-reveal">
+            <span class="pune-step__n" aria-hidden="true"></span>
+            <h3>Gather the first members</h3>
+            <p>We collect names, roles and interests so the first sessions fit the people who show up.</p>
+          </li>
+          <li class="pune-step pune-reveal">
+            <span class="pune-step__n" aria-hidden="true"></span>
+            <h3>Line up a host and speakers</h3>
+            <p>A venue, a few talks and a short panel. The same format our Bangalore members know.</p>
+          </li>
+          <li class="pune-step pune-reveal">
+            <span class="pune-step__n" aria-hidden="true"></span>
+            <h3>Run the first meetup</h3>
+            <p>Talks, a panel and flash mentoring. Photos and recordings land on this page afterwards.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="soon-title">
+      <div class="container">
+        <div class="pune-cta pune-reveal">
+          <div class="pune-cta__inner">
+            <span class="badge badge--accent">Coming soon</span>
+            <h2 id="soon-title">Pune is next on the map</h2>
+            <p>We are looking for the first Pune members, hosts and speakers. Tell us where you fit.</p>
+            <div class="soon-card__actions">
+              <a class="btn btn-primary" href="get-involved.html">Help start the Pune chapter</a>
+              <a class="btn btn-secondary" href="Chapters.html">See live chapters</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="chapter-next" aria-labelledby="next-title">
+      <div class="container">
+        <h2 class="chapter-next__title" id="next-title">Explore other chapters</h2>
+        <div class="chapter-next__grid"><a class="chapter-next__link" href="Past_Event.html"><span><span class="chapter-next__city">Bangalore</span><span class="chapter-next__meta">Karnataka</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a><a class="chapter-next__link" href="Hyderabad%20Past%20Event.html"><span><span class="chapter-next__city">Hyderabad</span><span class="chapter-next__meta">Telangana</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a><a class="chapter-next__link" href="Chennai%20Past%20Event.html"><span><span class="chapter-next__city">Chennai</span><span class="chapter-next__meta">Tamil Nadu</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/chapter-pages.js" defer></script>
+  <script src="js/chapter-extra.js" defer></script>
+</body>
+</html>

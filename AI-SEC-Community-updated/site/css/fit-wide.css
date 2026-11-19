@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Browser-fit width
+   Content now uses the browser width instead of a fixed 1120–1280px column,
+   so wide monitors no longer show empty side margins. Loaded LAST on every
+   page and wins over each page's inline .container rule by specificity.
+   Header/footer use the same numbers (see js/site-chrome.js).
+   ========================================================================== */
+:root {
+  --container-max-width: 1920px;
+  --wide-gutter: clamp(16px, 4.2vw, 88px);
+}
+html body .container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--wide-gutter);
+}

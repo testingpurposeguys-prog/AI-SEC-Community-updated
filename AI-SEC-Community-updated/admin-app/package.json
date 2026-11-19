@@ -1,0 +1,1 @@
+{ "name": "aisec-admin", "private": true, "engines": { "node": ">=18" } }

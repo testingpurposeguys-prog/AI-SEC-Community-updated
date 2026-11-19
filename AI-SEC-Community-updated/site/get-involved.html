@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Involved — AI-SEC Community | Join, Speak, or Bring Us to Your City</title>
+  <meta name="description" content="Join AI-SEC Community on LinkedIn, YouTube, and WhatsApp, submit a talk, suggest a topic, or bring an AI security chapter to your city." />
+  <link rel="canonical" href="https://aisec.community/get-involved.html" />
+
+  <!-- Open Graph / social cards — replace url & image with production values at deploy -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Get Involved — AI-SEC Community" />
+  <meta property="og:description" content="Join the community, submit a talk, suggest a topic, or bring an AI security chapter to your city." />
+  <meta property="og:image" content="assets/images/logo.png" />
+  <meta property="og:url" content="https://aisec.community/get-involved.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Get Involved — AI-SEC Community" />
+  <meta name="twitter:description" content="Join the community, submit a talk, suggest a topic, or bring an AI security chapter to your city." />
+  <meta name="twitter:image" content="assets/images/logo.png" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles, in cascade order -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Hero background image
+       Bugfix: the photo + dark gradient overlay here is fixed and always
+       dark, in both themes. The heading/subtitle used to inherit the
+       theme's --color-text, which flips to near-black in light mode —
+       dark text on a dark photo, effectively invisible. This section now
+       pins the hero text to a light color unconditionally (it never sits
+       on the page background, only on this photo), independent of
+       [data-theme]. -->
+  <style>
+    .hero-bg {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    /* Background photo lives on its own layer so it can be scaled for a
+       slow Ken Burns drift without touching layout or the fixed-attachment
+       bug Safari on iOS has with background-attachment: fixed. */
+    .hero-bg::before {
+      content: "";
+      position: absolute;
+      inset: -24px;
+      z-index: 0;
+      background-image:
+        linear-gradient(to bottom, rgba(10, 10, 20, 0.6), rgba(10, 10, 20, 0.8)),
+        url("Images/123\ get\ involved.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: hero-bg-drift 16s ease-in-out infinite alternate;
+      will-change: transform;
+    }
+
+    .hero-bg .section__header {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Always light text on this hero, regardless of [data-theme] — the
+       photo behind it is always dark, so the text must stay light in
+       both dark and light mode. */
+    .hero-bg .section__title {
+      color: var(--brand-white);
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-bg .section__subtitle {
+      color: rgba(255, 255, 255, 0.88);
+      text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55);
+    }
+
+    @keyframes hero-bg-drift {
+      from { transform: scale(1) translate3d(0, 0, 0); }
+      to   { transform: scale(1.08) translate3d(0, -1%, 0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-bg::before {
+        animation: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-bg {
+        min-height: 50vh;
+      }
+    }
+  </style>
+  <script src="js/site-chrome.js"></script>
+  <link rel="stylesheet" href="css/fit-wide.css" />
+</head>
+<body>
+
+  <site-header></site-header>
+
+  <main>
+
+    <!-- Page header -->
+    <section class="section hero-bg" id="get-involved-hero" aria-labelledby="get-involved-hero-title">
+      <div class="container section__header" data-animate="fade-up">
+        <h1 class="section__title" id="get-involved-hero-title">Get Involved</h1>
+        <p class="section__subtitle">There's no single way in — join online, show up in person, or help us build something new.</p>
+      </div>
+    </section>
+
+    <!-- How to join -->
+    <section class="section section--tint" aria-labelledby="how-to-join-title">
+      <div class="container">
+        <div class="section__header" data-animate="fade-up">
+          <h2 class="section__title" id="how-to-join-title">How to Join</h2>
+          <p class="section__subtitle">Pick whichever fits how you like to show up.</p>
+        </div>
+
+        <div class="grid grid-3" data-animate="fade-up">
+          <article class="card">
+            <div class="card__body">
+              <h3 class="card__title">LinkedIn</h3>
+              <p class="card__text">Follow for event announcements, recaps, and practitioner posts from the community.</p>
+              <a href="https://www.linkedin.com/company/ai-sec-community/?viewAsMember=true" class="btn btn-secondary" target="_blank" rel="noopener">Join on LinkedIn</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__body">
+              <h3 class="card__title">YouTube</h3>
+              <p class="card__text">Full recordings of past talks, workshops, and CTF debriefs.</p>
+              <a href="https://www.youtube.com/@AI-PentestingRD" class="btn btn-secondary" target="_blank" rel="noopener">Subscribe</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__body">
+              <h3 class="card__title">WhatsApp Community</h3>
+              <p class="card__text">Day-to-day discussion, quick questions, and heads-up on last-minute meetups.</p>
+              <a href="https://lnkd.in/gjFwaUWg" class="btn btn-secondary" target="_blank" rel="noopener">Join WhatsApp</a>
+            </div>
+          </article>
+<!--
+          <article class="card">
+            <div class="card__body">
+              <h3 class="card__title">Newsletter</h3>
+              <p class="card__text">One email, whenever there's something worth telling you about. No spam cadence.</p>
+              <a href="#newsletter" class="btn btn-tertiary">Subscribe</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__body">
+              <h3 class="card__title">Attend an Event</h3>
+              <p class="card__text">The easiest way in — show up to a meetup, workshop, or CTF near you.</p>
+              <a href="events.html" class="btn btn-tertiary">Browse Events</a>
+            </div>
+          </article>
+          -->
+        </div>
+      </div>
+    </section>
+<!--
+    
+    <section class="section" aria-labelledby="code-of-conduct-title" id="code-of-conduct">
+      <div class="container">
+        <div class="section__header" data-animate="fade-up">
+          <h2 class="section__title" id="code-of-conduct-title">Code of Conduct</h2>
+          <p class="section__subtitle">The short version: treat this like a professional community, not a comment section.</p>
+        </div>
+
+        <article class="card" data-animate="fade-up">
+          <div class="card__body">
+            <ul role="list" class="flex flex-col gap-sm">
+              <li class="card__text">Be respectful. Disagree on ideas, not people.</li>
+              <li class="card__text">No harassment, discrimination, or hate speech — online or in person.</li>
+              <li class="card__text">Boardroom discussions are Chatham House rule: share the insight, not who said it.</li>
+              <li class="card__text">Don't use community events for unsolicited sales pitches or recruiting spam.</li>
+              <li class="card__text">Report violations to any organizer — every complaint is taken seriously and handled discreetly.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+-->
+    <!-- Chapter status -->
+    <section class="section section--tint" aria-labelledby="chapter-status-title">
+      <div class="container">
+        <div class="section__header" data-animate="fade-up">
+          <h2 class="section__title" id="chapter-status-title">Chapter Status</h2>
+          <p class="section__subtitle">Bangalore is live. More chapters are on the way.</p>
+        </div>
+
+        <div class="grid grid-3" data-animate="fade-up">
+          <article class="card">
+            <div class="card__body">
+              <span class="badge badge--accent">Live</span>
+              <h3 class="card__title">Bangalore</h3>
+              <p class="card__text">Our founding chapter — monthly meetups, workshops, and CTFs since 2025.</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__body">
+              <span class="badge">Coming Soon</span>
+              <h3 class="card__title">Chennai</h3>
+              <p class="card__text">In the works — tell us you're interested below.</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__body">
+              <span class="badge">Coming Soon</span>
+              <h3 class="card__title">Pune</h3>
+              <p class="card__text">In the works — tell us you're interested below.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__body">
+              <span class="badge">Coming Soon</span>
+              <h3 class="card__title">Hyderabad</h3>
+              <p class="card__text">In the works — tell us you're interested below.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      
+    </section>
+<!--
+    <section class="section" aria-labelledby="bring-to-your-city-title" id="bring-to-your-city">
+      <div class="container">
+        <div class="section__header" data-animate="fade-up">
+          <h2 class="section__title" id="bring-to-your-city-title">Bring AI-Sec to Your City</h2>
+          <p class="section__subtitle">Tell us where we should show up next.</p>
+        </div>
+
+        <form class="grid grid-2" data-city-form novalidate data-animate="fade-up">
+          <div class="form-group">
+            <label class="form-label" for="city-form-name">Name</label>
+            <input class="form-input" type="text" id="city-form-name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="city-form-email">Email address</label>
+            <input class="form-input" type="email" id="city-form-email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="city-form-city">City</label>
+            <input class="form-input" type="text" id="city-form-city" name="city" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="city-form-role">Role</label>
+            <input class="form-input" type="text" id="city-form-role" name="role" placeholder="e.g. Security Engineer" required />
+          </div>
+          <div class="form-captcha" data-captcha-placeholder aria-hidden="true"></div>
+          <button class="btn btn-primary form-submit" type="submit">Bring AI-Sec to Your City</button>
+        </form>
+      </div>
+    </section>
+-->
+    <!-- Call for Speaker -->
+    <section class="section section--alt" aria-labelledby="speaker-submission-title">
+      <div class="container">
+        <div class="section__header" data-animate="fade-up">
+          <h2 class="section__title" id="speaker-submission-title">Call for Speaker</h2>
+          <p class="section__subtitle">Practitioner talks only — no vendor pitches.</p>
+        </div>
+
+        <div class="flex flex-col items-center gap-md" data-animate="fade-up" style="text-align:center;">
+          <a href="https://docs.google.com/forms/d/1t1_HVS2mvc0FH7D2Aaojzd-439_r5deLL1He_07ri8M"
+             class="btn btn-primary"
+             target="_blank"
+             rel="noopener">
+            Submit Talk
+          </a>
+        </div>
+      </div>
+    </section>
+<!--
+    
+    <section class="section" aria-labelledby="suggest-topic-title" id="suggest-a-topic">
+      <div class="container">
+        <div class="section__header" data-animate="fade-up">
+          <h2 class="section__title" id="suggest-topic-title">Suggest a Topic</h2>
+          <p class="section__subtitle">What should we cover next?</p>
+        </div>
+
+        <form class="flex flex-col gap-md" data-topic-form novalidate data-animate="fade-up">
+          <div class="form-group">
+            <label class="form-label" for="topic-form-email">Email address</label>
+            <input class="form-input" type="email" id="topic-form-email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="topic-form-topic">Topic</label>
+            <textarea class="form-textarea" id="topic-form-topic" name="topic" required></textarea>
+          </div>
+          <div class="form-captcha" data-captcha-placeholder aria-hidden="true"></div>
+          <button class="btn btn-primary form-submit" type="submit">Suggest a Topic</button>
+        </form>
+      </div>
+    </section>
+-->
+  </main>
+
+  <site-footer></site-footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/stats-counter.js" defer></script>
+  <script src="js/event-filters.js" defer></script>
+  <script src="js/forms.js" defer></script>
+</body>
+</html>

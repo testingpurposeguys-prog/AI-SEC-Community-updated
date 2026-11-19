@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI-SEC Community — AI Security &amp; AI for Security Meetups in Bangalore</title>
+  <meta name="description" content="AI-SEC Community is a practitioner-led network covering AI security and AI for security — workshops, CTFs, meetups, and talks." />
+  <link rel="canonical" href="https://aisec.community/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AI-SEC Community — AI Security &amp; AI for Security" />
+  <meta property="og:description" content="A practitioner-led network covering AI security and AI for security — workshops, CTFs, meetups, and talks." />
+  <meta property="og:image" content="assets/images/logo.png" />
+  <meta property="og:url" content="https://aisec.community/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI-SEC Community — AI Security &amp; AI for Security" />
+  <meta name="twitter:description" content="A practitioner-led network covering AI security and AI for security — workshops, CTFs, meetups, and talks." />
+  <meta name="twitter:image" content="assets/images/logo.png" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/hero-center.css" />
+  <link rel="stylesheet" href="css/what-we-do.css" />
+  <link rel="stylesheet" href="css/upcoming.css" />
+  <link rel="stylesheet" href="css/tickets.css" />
+  <link rel="stylesheet" href="css/fit.css" />
+
+  <style>
+    .wwd-icon{
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, #A855F7, #7C3AED);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .wwd-icon svg{ width: 26px; height: 26px; }
+
+    /* Remove the side spaces: let "What We Do" use the full page width */
+    #what-we-do > .container {
+      max-width: none;
+      width: 100%;
+      padding-inline: clamp(16px, 3vw, 48px);
+    }
+
+    /* ---------- Animations ---------- */
+    @keyframes aisecFadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes aisecFloat {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-5px); }
+    }
+    @keyframes aisecGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(168, 85, 247, .45); }
+      50%      { box-shadow: 0 0 0 10px rgba(168, 85, 247, 0); }
+    }
+    @keyframes aisecShine {
+      from { background-position: 0% 50%; }
+      to   { background-position: 200% 50%; }
+    }
+
+    /* Hero entrance */
+    .hero__content h1 .small-text,
+    .hero__content h1 .big-text,
+    .hero__subtitle,
+    .hero__cta-group {
+      opacity: 0;
+      animation: aisecFadeUp .8s cubic-bezier(.2, .7, .2, 1) forwards;
+    }
+    .hero__content h1 .small-text { animation-delay: .1s; }
+    .hero__content h1 .big-text   { animation-delay: .3s; display: inline-block; }
+    .hero__subtitle               { animation-delay: .55s; }
+    .hero__cta-group              { animation-delay: .75s; }
+
+    /* Scroll cue bounce */
+    .hero__scroll-cue svg { animation: aisecFloat 1.8s ease-in-out infinite; }
+
+    /* What We Do cards: staggered reveal + hover */
+    .js-reveal .grid-4 .card {
+      opacity: 0;
+      transform: translateY(28px);
+    }
+    .js-reveal .grid-4 .card.is-in {
+      animation: aisecFadeUp .7s cubic-bezier(.2, .7, .2, 1) forwards;
+      animation-delay: calc(var(--i, 0) * 90ms);
+    }
+    #what-we-do .card {
+      transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    }
+    #what-we-do .card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(168, 85, 247, .6);
+      box-shadow: 0 18px 40px rgba(124, 58, 237, .28);
+    }
+    .wwd-icon { transition: transform .35s ease; }
+    #what-we-do .card:hover .wwd-icon {
+      transform: scale(1.12) rotate(-6deg);
+      animation: aisecGlow 1.4s ease-out infinite;
+    }
+
+    /* Event cards */
+    .event-card { transition: transform .3s ease, box-shadow .3s ease; }
+    .event-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(124, 58, 237, .25);
+    }
+
+    /* Buttons */
+    .btn { transition: transform .2s ease, box-shadow .2s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary:hover { box-shadow: 0 8px 22px rgba(168, 85, 247, .45); }
+
+    /* Animated gradient on section titles */
+    #what-we-do-title {
+      background: linear-gradient(90deg, #fff, #C084FC, #fff);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: aisecShine 5s linear infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+      .js-reveal .grid-4 .card { opacity: 1; transform: none; }
+    }
+
+    /* Navbar: keep everything on one line */
+
+/* Switch to the hamburger menu before the links run out of room */
+    
+  </style>
+  <script src="js/site-chrome.js"></script>
+  <script src="js/dynamic-content.js"></script>
+  <link rel="stylesheet" href="css/fit-wide.css" />
+</head>
+<body id="top">
+
+  <site-header></site-header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero__photo" src="assets/images/hero-bg.jpg.jpeg" alt="" aria-hidden="true" />
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__fade" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <p class="hero__badge"><span class="hero__badge-dot" aria-hidden="true"></span>AI-SEC Community &middot; Bangalore, India</p>
+
+        <div class="hero-slider" id="hero-slider">
+          <div class="hero-slide is-active" data-slide>
+            <h1 id="hero-title" class="hero-slide__title">Hands-on workshops.<br>Real-world practice.</h1>
+            <p class="hero-slide__text">Monthly meetups, CTFs and flash mentoring for practitioners at every level.</p>
+          </div>
+          <div class="hero-slide" data-slide aria-hidden="true">
+            <h2 class="hero-slide__title">We Talk About<br>AI Security &amp;<br>AI for Security.</h2>
+            <p class="hero-slide__text">Securing the age of AI, together.</p>
+          </div>
+          <div class="hero-slide" data-slide aria-hidden="true">
+            <h2 class="hero-slide__title">One community.<br>8000+ practitioners.</h2>
+            <p class="hero-slide__text">Practitioner-led talks, workshops and CTFs across AI security.</p>
+          </div>
+        </div>
+
+        <div class="hero__cta-group">
+          <a href="#" class="btn btn-primary hero__btn-main">Register for Next Event <span aria-hidden="true">&rarr;</span></a>
+          <a href="#what-we-do-title" class="hero__how"><span class="hero__how-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>How We Work</a>
+          <a href="https://www.linkedin.com/company/ai-sec-community/?viewAsMember=true" class="btn btn-secondary hero__btn-ghost">Join on LinkedIn</a>
+        </div>
+
+        <button type="button" class="hero-arrow hero-arrow--prev" aria-label="Previous slide">&#8249;</button>
+        <button type="button" class="hero-arrow hero-arrow--next" aria-label="Next slide">&#8250;</button>
+        <div class="hero-dots" role="tablist" aria-label="Hero slides"></div>
+      </div>
+
+      <div class="hero__stats-wrapper">
+        <div class="stats-bar" aria-label="Community stats">
+          <div class="stat-item">
+            <span class="stat-item__number" data-count-to="230" data-suffix="+">0</span>
+            <span class="stat-item__label">Monthly Attendees</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item__number" data-count-to="60" data-suffix="+">0</span>
+            <span class="stat-item__label">Workshop Capacity</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item__number" data-count-to="8000" data-suffix="+">0</span>
+            <span class="stat-item__label">Community Members</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#what-we-do-title" class="hero__scroll-cue">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        <span class="visually-hidden">Scroll down to see what we do</span>
+      </a>
+    </section>
+
+    <!-- What we do -->
+    <section class="section" id="what-we-do" aria-labelledby="what-we-do-title">
+      <div class="container">
+        <div class="section__header" data-animate="fade-up">
+          <h2 class="section__title" id="what-we-do-title">What We Do</h2>
+          <p class="section__subtitle">We host monthly sessions and meetups that provide a platform for:</p>
+        </div>
+
+        <div class="grid grid-4" data-animate="fade-up">
+
+          <article class="card">
+            <div class="card__body">
+              <div class="wwd-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+              <h3 class="card__title">Offline &amp; Online Meetups</h3>
+              <p class="card__text">Connect, learn, and collaborate through engaging offline and online AI security meetups.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__body">
+              <div class="wwd-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+              <h3 class="card__title">Hands-on AI Security Workshops</h3>
+              <p class="card__text">Build practical AI security skills through hands-on workshops, guided exercises, and real-world scenarios.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__body">
+              <div class="wwd-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div>
+              <h3 class="card__title">Technical Sessions</h3>
+              <p class="card__text">Explore advanced AI security concepts, emerging threats, and practical techniques through expert-led technical sessions.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__body">
+              <div class="wwd-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div>
+              <h3 class="card__title">Hackathons &amp; CTF Challenges</h3>
+              <p class="card__text">Challenge yourself with real-world AI security hackathons and CTFs designed to test your skills, creativity, and problem-solving.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__body">
+              <div class="wwd-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+              <h3 class="card__title">Flash Mentoring</h3>
+              <p class="card__text">Gain guidance from experienced AI security professionals who can help accelerate your personal and technical growth.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__body">
+              <div class="wwd-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+              <h3 class="card__title">Career &amp; Job Opportunities</h3>
+              <p class="card__text">Discover potential job openings, internships, and collaborations within the AI security community.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__body">
+              <div class="wwd-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+              <h3 class="card__title">Research &amp; Knowledge Sharing</h3>
+              <p class="card__text">Test your skills, solve challenges, and sharpen your cybersecurity expertise.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__body">
+              <div class="wwd-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+              <h3 class="card__title">Community &amp; Industry Networking</h3>
+              <p class="card__text">Connect with AI and cybersecurity professionals, build meaningful relationships, and discover opportunities across the industry.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Next events -->
+        <section class="section section--tint tickets" id="events" aria-labelledby="tickets-title">
+      <div class="tickets__wrap">
+        <div class="tickets__head" data-animate="fade-up">
+          <h2 id="tickets-title">Next summit, three chapters</h2>
+          <p>Stay tuned for the announcement of our next summit.</p>
+        </div>
+        <article class="ticket" data-animate="fade-up">
+          <div class="ticket__media"><img src="Images/TBA.png" loading="lazy" decoding="async" alt="Event details to be announced" /></div>
+          <div class="ticket__body">
+            <span class="ticket__chapter">Bangalore Chapter</span>
+            <h3 class="ticket__title">AI-SEC COMMUNITY November Monthly Summit</h3>
+            <ul class="ticket__facts"><li>&#128197; Date: TBA</li><li>&#128205; Venue: TBA</li></ul>
+            <a href="#" class="btn btn-primary" target="_blank" rel="noopener">Register Now on Luma <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+        <article class="ticket" data-animate="fade-up">
+          <div class="ticket__media"><img src="Images/TBA.png" loading="lazy" decoding="async" alt="Event details to be announced" /></div>
+          <div class="ticket__body">
+            <span class="ticket__chapter">Hyderabad Chapter</span>
+            <h3 class="ticket__title">AI-SEC COMMUNITY November Monthly Summit</h3>
+            <ul class="ticket__facts"><li>&#128197; Date: TBA</li><li>&#128205; Venue: TBA</li></ul>
+            <a href="#" class="btn btn-primary" target="_blank" rel="noopener">Register Now on Luma <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+        <article class="ticket" data-animate="fade-up">
+          <div class="ticket__media"><img src="Images/TBA.png" loading="lazy" decoding="async" alt="Event details to be announced" /></div>
+          <div class="ticket__body">
+            <span class="ticket__chapter">Chennai Chapter</span>
+            <h3 class="ticket__title">AI-SEC COMMUNITY November Monthly Summit</h3>
+            <ul class="ticket__facts"><li>&#128197; Date: TBA</li><li>&#128205; Venue: TBA</li></ul>
+            <a href="#" class="btn btn-primary" target="_blank" rel="noopener">Register Now on Luma <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+  </main>
+
+  <site-footer></site-footer>
+
+  <script>
+    // Staggered scroll reveal for the"What We Do" cards
+    (function () {
+      var cards = document.querySelectorAll('#what-we-do .grid-4 .card');
+      if (!cards.length || !('IntersectionObserver' in window)) return;
+      document.documentElement.classList.add('js-reveal');
+      cards.forEach(function (c, i) { c.style.setProperty('--i', i % 4); });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.15 });
+      cards.forEach(function (c) { io.observe(c); });
+    })();
+  </script>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/stats-counter.js" defer></script>
+  <script src="js/event-filters.js" defer></script>
+  <script src="js/forms.js" defer></script>
+  <script src="js/hero-slider.js" defer></script>
+  <script src="js/wwd-fx.js" defer></script>
+</body>
+</html>

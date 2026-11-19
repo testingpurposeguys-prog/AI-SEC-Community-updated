@@ -1,0 +1,25 @@
+/* About + Community Partners: first screen always fits the browser window.
+   Home is handled in fit.css. Only sizing/positioning is touched; the look stays the same. */
+:root { --nav-h: 79px; --mq-h: 76px; }
+
+main > .hero {
+  display: flex; flex-direction: column; justify-content: center;
+  min-height: calc(100svh - var(--nav-h));
+}
+/* About: hero + the ticker strip below it together fill one screen */
+main > .hero:has(+ .marquee) { min-height: calc(100svh - var(--nav-h) - var(--mq-h)); }
+
+/* Partners: copy + orbit scale with window height so nothing is pushed below the fold */
+main > .hero .hero__inner { width: 100%; }
+main > .hero .hero__split { margin-bottom: clamp(14px, 3vh, 32px); }
+main > .hero h1.page-title { font-size: clamp(2rem, min(4.6vw, 8vh), 3.7rem); }
+main > .hero .orbit { max-width: min(520px, calc(100svh - var(--nav-h) - 200px)); }
+@media (min-width: 901px) {
+  main > .hero:not(:has(+ .marquee)) { padding-block: clamp(16px, 4vh, 56px) clamp(16px, 3vh, 40px); }
+}
+
+/* Phones / narrow: let the hero grow with its content, no clipping */
+@media (max-width: 900px) {
+  main > .hero { justify-content: flex-start; }
+  main > .hero .orbit { max-width: min(400px, 100%); }
+}

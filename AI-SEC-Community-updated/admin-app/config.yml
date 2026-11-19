@@ -1,0 +1,120 @@
+# AI-SEC admin dashboard (separate Vercel project, Root Directory = admin-app)
+backend:
+  name: github
+  repo: llmtools/AI-SEC-Community   # <-- change this
+  branch: main
+  base_url: https://admin-gules-zeta-69.vercel.app   # <-- ADMIN project URL
+  auth_endpoint: api/auth
+media_folder: "site/Images/uploads"
+public_folder: "/Images/uploads"
+publish_mode: simple
+collections:
+  - name: settings
+    label: "Site Settings (all pages)"
+    description: "Register button link, social links, home page numbers and the announcement bar. Applies to every page."
+    files:
+      - label: "Site Settings"
+        name: settings
+        file: "site/data/settings.json"
+        format: json
+        fields:
+          - {label: "Register Now button link (Luma)", name: registerUrl, widget: string, hint: "Used by the Register Now button in the top bar of every page"}
+          - label: "Announcement bar (top of every page)"
+            name: banner
+            widget: object
+            fields:
+              - {label: "Show the bar?", name: enabled, widget: boolean, default: false}
+              - {label: Text, name: text, widget: string, required: false}
+              - {label: "Link text", name: linkText, widget: string, required: false}
+              - {label: "Link URL", name: linkUrl, widget: string, required: false}
+          - label: "Social links (footer)"
+            name: social
+            widget: object
+            fields:
+              - {label: LinkedIn, name: linkedin, widget: string, required: false}
+              - {label: YouTube, name: youtube, widget: string, required: false}
+              - {label: WhatsApp, name: whatsapp, widget: string, required: false}
+              - {label: "X / Twitter", name: twitter, widget: string, required: false}
+          - label: "Home page numbers (3 boxes, in order)"
+            name: stats
+            widget: list
+            min: 3
+            max: 3
+            summary: "{{fields.label}}: {{fields.value}}"
+            fields:
+              - {label: Number, name: value, widget: number, value_type: int}
+              - {label: "Suffix (e.g. +)", name: suffix, widget: string, required: false}
+              - {label: Label, name: label, widget: string}
+  - name: upcoming
+    label: "Upcoming Meetups (Home page)"
+    description: "One card per chapter on the home page. Add an entry to replace the TBA card."
+    files:
+      - label: "Upcoming Meetups"
+        name: upcoming
+        file: "site/data/upcoming-events.json"
+        format: json
+        fields:
+          - label: "Meetups (one per chapter)"
+            name: events
+            widget: list
+            summary: "{{fields.chapter}} - {{fields.title}}"
+            fields:
+              - {label: Chapter, name: chapter, widget: select, options: [bangalore, hyderabad, chennai]}
+              - {label: Title, name: title, widget: string}
+              - {label: "Date text (e.g. 29 Nov 2026, Sat)", name: dateLabel, widget: string}
+              - {label: "Date (for search engines)", name: dateISO, widget: string, required: false, hint: "YYYY-MM-DD"}
+              - {label: Venue, name: venue, widget: string}
+              - {label: "Banner image", name: image, widget: image, required: false}
+              - {label: "Luma registration link", name: lumaUrl, widget: string}
+              - {label: "Subtitle", name: subtitle, widget: string, required: false}
+  - name: monthly
+    label: "Monthly Updates (Past Events)"
+    description: "Add each monthly meetup here. It appears at the top of the Past Events page."
+    files:
+      - label: "Monthly Updates"
+        name: monthly
+        file: "site/data/monthly-updates.json"
+        format: json
+        fields:
+          - label: "Monthly meetups"
+            name: updates
+            widget: list
+            summary: "{{fields.month}} - {{fields.host}}"
+            fields:
+              - {label: "Month (pick any date in that month)", name: month, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD"}
+              - {label: Chapter, name: chapter, widget: string, default: "Past Event"}
+              - {label: "Host / venue", name: host, widget: string}
+              - {label: Summary, name: summary, widget: string}
+              - {label: "Group photo", name: groupPhoto, widget: image, required: false}
+              - {label: "YouTube recording link", name: youtubeUrl, widget: string, required: false}
+              - label: "Session speakers"
+                name: speakers
+                widget: list
+                required: false
+                fields: &person
+                  - {label: Name, name: name, widget: string}
+                  - {label: Photo, name: image, widget: image, required: false}
+                  - {label: "LinkedIn URL", name: linkedin, widget: string, required: false}
+                  - {label: "Session topic", name: topic, widget: string, required: false}
+                  - {label: "Role label (optional, e.g. Moderator)", name: role, widget: string, required: false}
+              - {label: "Panel title", name: panelTitle, widget: string, required: false}
+              - {label: "Panel members", name: panel, widget: list, required: false, fields: *person}
+              - {label: "Flash mentors", name: mentors, widget: list, required: false, fields: *person}
+  - name: partners
+    label: "Community Partners"
+    description: "Partner logos and links on the Community Partners page."
+    files:
+      - label: "Community Partners"
+        name: partners
+        file: "site/data/partners.json"
+        format: json
+        fields:
+          - label: Partners
+            name: partners
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Logo, name: logo, widget: image}
+              - {label: Description, name: description, widget: text}
+              - {label: Website, name: url, widget: string}

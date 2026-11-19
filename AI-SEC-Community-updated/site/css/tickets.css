@@ -1,0 +1,19 @@
+/* Upcoming events: one section, three boarding-pass tickets. Fills the browser width. */
+.tickets { scroll-margin-top: 80px; padding-block: clamp(48px, 8vh, 96px); }
+.tickets__wrap { width: min(1240px, 100% - clamp(32px, 6vw, 96px)); margin-inline: auto; }
+.tickets__head { max-width: 60ch; margin-bottom: clamp(24px, 4vh, 48px); }
+.tickets__head h2 { font-family: var(--font-heading); font-weight: 800; font-size: clamp(1.9rem, 4.2vw, 3.2rem); line-height: 1.05; letter-spacing: -.035em; margin: 0; }
+.tickets__head p { margin: 12px 0 0; color: var(--color-text-secondary); font-size: .9rem; }
+.ticket { display: grid; grid-template-columns: minmax(200px, 38%) 1fr; margin-bottom: 20px; overflow: hidden;
+  border: 1.5px dashed var(--brand-primary); border-radius: 18px; background: var(--color-surface); position: relative; }
+.ticket__media img { width: 100%; height: 100%; min-height: 190px; object-fit: cover; display: block; }
+.ticket__body { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 12px;
+  padding: clamp(20px, 3.4vw, 44px); border-left: 2px dashed var(--brand-primary); }
+.ticket__chapter { font: 600 .8rem var(--font-heading); letter-spacing: .04em; color: #c996ff; }
+.ticket__title { margin: 0; font: 700 clamp(1.25rem, 2.3vw, 1.9rem)/1.2 var(--font-heading); }
+.ticket__facts { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.ticket__facts li { padding: 8px 16px; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-bg-alt); color: var(--color-text-secondary); font-size: .9rem; }
+@media (max-width: 760px) {
+  .ticket { grid-template-columns: 1fr; }
+  .ticket__body { border-left: 0; border-top: 2px dashed var(--brand-primary); }
+}

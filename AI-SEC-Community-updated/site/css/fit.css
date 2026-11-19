@@ -1,0 +1,43 @@
+/* Home hero: always fit the browser window (nav + hero + stats = one screen).
+   Only sizing/positioning is touched; the look stays the same. */
+:root { --nav-h: 80px; }
+
+main .hero {
+  min-height: calc(100svh - var(--nav-h));
+  max-height: 1000px;
+  padding-block: clamp(16px, 3vh, 48px) 0;
+  justify-content: space-between;
+}
+main .hero__content { margin-block: auto; padding-block: 8px; }
+
+/* Title scales with the window height too, so it never pushes the CTAs off-screen */
+main .hero-slide__title { font-size: clamp(2rem, min(5.2vw, 8.6vh), 3.8rem); margin-bottom: clamp(8px, 1.6vh, 16px); }
+main .hero__content { gap: clamp(10px, 2vh, 24px); }
+
+/* Stats card sits inside the hero, at its bottom, instead of hanging below it */
+main .hero__stats-wrapper {
+  position: relative; left: auto; bottom: auto; transform: none;
+  margin: 0 auto clamp(12px, 2.5vh, 28px);
+  width: min(100% - 2rem, 60rem);
+}
+main .hero .stat-item { padding-block: clamp(8px, 1.6vh, 20px); }
+main .hero .stat-item__number { font-size: clamp(1.6rem, 4.2vh, 2.6rem); }
+
+/* Slide dots: bottom-right, just above the stats card */
+main .hero-dots { bottom: calc(clamp(12px, 2.5vh, 28px) + clamp(120px, 24vh, 200px)); }
+
+/* Scroll cue only when there is spare height */
+@media (max-height: 820px) { .hero__scroll-cue { display: none; } }
+
+/* Phones / narrow: let the hero grow with its content, no clipping */
+@media (max-width: 768px) {
+  main .hero { max-height: none; min-height: calc(100svh - var(--nav-h)); justify-content: flex-start; }
+  main .hero__stats-wrapper { margin-top: var(--space-lg); }
+  main .hero-dots { position: static; bottom: auto; margin-top: var(--space-md); }
+}
+
+/* Align hero with the navbar: text and stats card share the logo's left/right edges */
+@media (min-width: 769px) {
+  main .hero__content { max-width: var(--container-max-width, 1200px); }
+  main .hero__stats-wrapper { width: calc(min(100%, var(--container-max-width, 1200px)) - 2 * var(--space-xl, 40px)); }
+}

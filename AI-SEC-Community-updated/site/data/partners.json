@@ -1,0 +1,70 @@
+{
+  "partners": [
+    {
+      "name": "Cybe Global - CSA Bangalore",
+      "logo": "/Images/Community Partners/New/cybeglobal_logo.jpg",
+      "description": "Cloud Security Alliance (CSA) Bangalore Chapter is India's most vibrant cybersecurity community — at the forefront of cloud, AI, and emerging tech security.",
+      "url": "https://cybe.global"
+    },
+    {
+      "name": "CIA Conference",
+      "logo": "/Images/Community Partners/New/Dark_CIACON.png",
+      "description": "CIACON brings cybersecurity professionals, researchers, students, and industry leaders together to learn, collaborate, and innovate.The conference aims to strengthen India's cybersecurity ecosystem and shape its future.",
+      "url": "http://www.ciaconference.com"
+    },
+    {
+      "name": "Black Hat India 2026",
+      "logo": "/Images/Community Partners/New/black hat.png",
+      "description": "Black Hat, launching in India for the first time, is a leading global information security event showcasing the latest research, trends, Trainings, and Briefings.It brings together top security professionals and industry experts to share knowledge, innovation, and technical expertise.",
+      "url": "https://www.blackhat-india.com"
+    },
+    {
+      "name": "Reva University",
+      "logo": "/Images/Community Partners/New/reva.png",
+      "description": "RACE develops visionary enterprise leaders through specialized, interdisciplinary, and industry-focused programs for working professionals, combining experiential learning with the latest tools, technologies, and skills. Led by renowned corporate leaders and trainers, its programs build practical expertise and prepare professionals for the evolving demands of the industry.",
+      "url": "https://race.reva.edu.in"
+    },
+    {
+      "name": "Bsides Bangalore",
+      "logo": "/Images/Community Partners/New/B Bangalore.jpg",
+      "description": "A community-driven platform where information security professionals come together to learn, collaborate, inspire, and address evolving cybersecurity challenges.",
+      "url": "https://bsidesbangalore.in"
+    },
+    {
+      "name": "Bsides Indore",
+      "logo": "/Images/Community Partners/New/B indore.jpg",
+      "description": "Security BSides Indore India 🇮🇳 part of Global Security BSides Conference.",
+      "url": "https://www.bsidesindore.in"
+    },
+    {
+      "name": "Bsides Mumbai",
+      "logo": "/Images/Community Partners/New/bsidesmumbai_logo.jpg",
+      "description": "Security Bsides is a community driven framework for building events by and for information security community members. These events are already happening in major cities all over the world! We are responsible for organizing an independent BSides approved event for Ahmedabad, India.",
+      "url": "https://bsidesmumbai.in/"
+    },
+    {
+      "name": "CXO Elite Forum",
+      "logo": "/Images/Community Partners/New/cxo.jpg",
+      "description": "CXO Elite Forum is a non-profit leadership community focused on Digital Trust, Cybersecurity, Responsible Innovation, and Leadership Excellence.It connects industry leaders, cybersecurity professionals, policymakers, academia, and experts to collaborate, strengthen cyber resilience, and empower the next generation.",
+      "url": "https://cxoeliteforum.com/"
+    },
+    {
+      "name": "AltSecCON",
+      "logo": "/Images/Community Partners/New/altseccon.jpg",
+      "description": "Global leader in hands-on learning for red team, enterprise and cloud security. Join 50000+ infosec professionals from 130+ countries.",
+      "url": "https://www.alteredsecurity.com/"
+    },
+    {
+      "name": "ACFE Bangalore",
+      "logo": "/Images/Community Partners/New/ACFE.png",
+      "description": "The ACFE is the world's largest anti-fraud organization and premier provider of anti-fraud training and education. Together with more than 100,000 members, the ACFE is reducing business fraud world-wide and inspiring public confidence in the integrity and objectivity within the profession.",
+      "url": "https://www.acfe.com/"
+    },
+    {
+      "name": "DCG Coimbatore",
+      "logo": "/Images/Community Partners/New/DCG.jpg",
+      "description": "DCG Coimbatore is a cybersecurity community bringing together security researchers, professionals, students, and technology enthusiasts to collaborate and learn. As part of the global DEF CON community network, we encourage knowledge sharing, hands-on learning, and innovation. Our goal is to strengthen cybersecurity skills and build a connected security community in India.",
+      "url": "https://www.dcg91422.org/"
+    }
+  ]
+}

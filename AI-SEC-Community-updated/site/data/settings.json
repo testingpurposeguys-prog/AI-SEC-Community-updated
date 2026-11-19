@@ -1,0 +1,32 @@
+{
+  "registerUrl": "https://luma.com/ihwkjic3",
+  "banner": {
+    "enabled": false,
+    "text": "",
+    "linkText": "",
+    "linkUrl": ""
+  },
+  "social": {
+    "linkedin": "https://www.linkedin.com/company/ai-sec-community/",
+    "youtube": "https://www.youtube.com/@AI-PentestingRD",
+    "whatsapp": "https://chat.whatsapp.com/Je6FdiOAhg59l80TBUSzJm",
+    "twitter": ""
+  },
+  "stats": [
+    {
+      "value": 16,
+      "suffix": "+",
+      "label": "Monthly Attendees"
+    },
+    {
+      "value": 60,
+      "suffix": "+",
+      "label": "Workshop Capacity"
+    },
+    {
+      "value": 8000,
+      "suffix": "+",
+      "label": "Community Members"
+    }
+  ]
+}

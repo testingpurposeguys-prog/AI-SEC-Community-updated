@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Past Events — Hyderabad Chapter | AI-SEC Community</title>
+  <meta name="description" content="Every AI-SEC Community meetup in Hyderabad: speakers, panel discussions, flash mentoring, photos and session recordings." />
+  <link rel="canonical" href="https://aisec.community/Hyderabad%20Past%20Event.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Past Events — Hyderabad Chapter | AI-SEC Community" />
+  <meta property="og:description" content="Every AI-SEC Community meetup in Hyderabad: speakers, panel discussions, flash mentoring, photos and session recordings." />
+  <meta property="og:image" content="assets/images/logo.png" />
+  <meta property="og:url" content="https://aisec.community/Hyderabad%20Past%20Event.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Past Events — Hyderabad Chapter | AI-SEC Community" />
+  <meta name="twitter:description" content="Every AI-SEC Community meetup in Hyderabad: speakers, panel discussions, flash mentoring, photos and session recordings." />
+  <meta name="twitter:image" content="assets/images/logo.png" />
+
+  <link rel="icon" type="image/svg+xml" href="/Images/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <style>
+    /* Smooth jump when clicking October / September / August */
+    html { scroll-behavior: smooth; }
+
+    .archive-nav { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+    .archive-nav a {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.5rem 1rem; border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.15);
+      font-family: 'JetBrains Mono', monospace; font-size: 0.85rem;
+      text-decoration: none;
+    }
+
+    .month-block { padding-top: 1rem; scroll-margin-top: 90px; }
+    .month-block + .month-block {
+      margin-top: 3.5rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 3.5rem;
+    }
+    .month-block__header { margin-bottom: 2rem; }
+    .month-block__meta { display: flex; gap: 0.6rem; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; }
+
+    .event-group { margin-bottom: 2.5rem; }
+    .event-group:last-child { margin-bottom: 0; }
+    .event-group__header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.25rem; }
+    .event-group__title { font-family: 'Poppins', sans-serif; font-size: 1.05rem; font-weight: 700; margin: 0; }
+    .badge--muted { opacity: 0.75; }
+
+    .grid-2c { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3c { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-4c { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    @media (max-width: 1024px) {
+      .grid-3c, .grid-4c { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .grid-2c, .grid-3c, .grid-4c { grid-template-columns: 1fr; }
+    }
+
+    .highlight-photo {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 520px;
+      object-fit: contain;
+      border-radius: var(--radius-md, 10px);
+    }
+    .highlight-card { padding: 0; overflow: hidden; }
+    .highlight-card .card__body { padding: 0.75rem 0.9rem; }
+    .highlight-card .card__text { margin: 0; font-size: 0.85rem; opacity: 0.75; }
+
+    .highlights-grid { display: block; column-count: 2; column-gap: 1.5rem; }
+    .highlights-grid .highlight-card {
+      display: inline-block;
+      width: 100%;
+      break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+      margin: 0 0 1.5rem;
+    }
+    @media (max-width: 640px) {
+      .highlights-grid { column-count: 1; }
+    }
+
+    /* Responsive 16:9 video embed */
+    .video-embed__frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+    .video-embed__frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-embed__link { margin-left: 0.5rem; }
+  </style>
+  <link rel="stylesheet" href="css/chapter-pages.css" />
+  <link rel="stylesheet" href="css/chapter-art.css" />
+  <link rel="stylesheet" href="css/hyderabad-archive.css" />
+  <script>document.documentElement.classList.add("cp-js");</script>
+  <script src="js/site-chrome.js"></script>
+  <script>try{if(!localStorage.getItem("ai-sec-theme"))document.documentElement.setAttribute("data-theme","light")}catch(e){}</script>
+  <link rel="stylesheet" href="css/fit-wide.css" />
+</head>
+<body>
+
+  <!-- Shared icon sprite (defined once, reused everywhere) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.881 3.87 6 2.5 6S0 4.881 0 3.5 1.12 1 2.5 1s2.48 1.119 2.48 2.5zM.24 8.25h4.5V23H.24V8.25zM8.02 8.25h4.31v2.01h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V23h-4.5v-6.75c0-1.61-.03-3.68-2.24-3.68-2.25 0-2.59 1.75-2.59 3.56V23h-4.5V8.25z"/></symbol>
+      <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.391.524A2.994 2.994 0 0 0 .502 6.186 31.26 31.26 0 0 0 0 12a31.26 31.26 0 0 0 .502 5.814 2.994 2.994 0 0 0 2.107 2.117c1.886.524 9.391.524 9.391.524s7.505 0 9.391-.524a2.994 2.994 0 0 0 2.107-2.117A31.26 31.26 0 0 0 24 12a31.26 31.26 0 0 0-.502-5.814zM9.75 15.568V8.432L15.818 12l-6.068 3.568z"/></symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .16 5.304.157 11.893c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.582 0 11.885-5.304 11.888-11.893a11.821 11.821 0 0 0-3.418-8.452"/></symbol>
+    </defs>
+  </svg>
+
+  <site-header></site-header>
+
+  <main>
+
+    <!-- Page header -->
+    <section class="chapter-hero city-hero" aria-labelledby="past-hero-title">
+      <div data-network-animation aria-hidden="true"></div>
+      <span class="chapter-hero__orb chapter-hero__orb--a" aria-hidden="true"></span>
+      <span class="chapter-hero__orb chapter-hero__orb--b" aria-hidden="true"></span>
+      <div class="city-hero__art" aria-hidden="true">
+        <svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg">
+          <rect class="fillish" x="110" y="84" width="180" height="86"/>
+          <rect class="fillish" x="96" y="46" width="14" height="124"/>
+          <rect class="fillish" x="290" y="46" width="14" height="124"/>
+          <path class="ln ground" pathLength="100" style="--len:100;--d:0" d="M0 170H400"/>
+          <path class="ln" pathLength="100" style="--len:100;--d:0.3" d="M110 170V84H290V170"/>
+          <path class="ln" pathLength="100" style="--len:100;--d:0.5" d="M110 84V70H290V84M110 70H290"/>
+          <path class="ln" pathLength="100" style="--len:100;--d:0.6" d="M125 84V78q5-8 10 0V84M153 84V78q5-8 10 0V84M181 84V78q5-8 10 0V84M209 84V78q5-8 10 0V84M237 84V78q5-8 10 0V84M265 84V78q5-8 10 0V84"/>
+          <path class="ln" pathLength="100" style="--len:100;--d:0.9" d="M164 170V120q36-42 72 0V170M174 170V124q26-28 52 0V170"/>
+          <path class="ln" pathLength="100" style="--len:100;--d:1" d="M124 170V138q10-16 20 0V170M256 170V138q10-16 20 0V170"/>
+          <path class="ln" pathLength="100" style="--len:100;--d:0.8" d="M96 170V46H110V170M290 170V46H304V170"/>
+          <path class="ln" pathLength="100" style="--len:100;--d:1.1" d="M91 66H115M91 100H115M285 66H309M285 100H309"/>
+          <path class="ln" pathLength="100" style="--len:100;--d:1.3" d="M94 46q9-20 18 0M288 46q9-20 18 0M103 36V24M297 36V24"/>
+          <path class="ln" pathLength="100" style="--len:100;--d:1.4" d="M140 70V62q8-12 16 0V70M244 70V62q8-12 16 0V70M178 70V62q22-24 44 0V70M200 40V50"/>
+          <rect class="win" style="--w:0.0" x="128" y="77" width="4" height="7" rx="1"/><rect class="win" style="--w:0.4" x="156" y="77" width="4" height="7" rx="1"/><rect class="win" style="--w:0.8" x="184" y="77" width="4" height="7" rx="1"/><rect class="win" style="--w:1.2000000000000002" x="212" y="77" width="4" height="7" rx="1"/><rect class="win" style="--w:1.6" x="240" y="77" width="4" height="7" rx="1"/><rect class="win" style="--w:2.0" x="268" y="77" width="4" height="7" rx="1"/>
+          <rect class="win" style="--w:1" x="100" y="74" width="4" height="10" rx="1"/>
+          <rect class="win" style="--w:2.5" x="296" y="74" width="4" height="10" rx="1"/>
+          <rect class="win" style="--w:3" x="100" y="108" width="4" height="10" rx="1"/>
+          <rect class="win" style="--w:0.5" x="296" y="108" width="4" height="10" rx="1"/>
+          <path class="flag" d="M297 24l16 5-16 5z" style="animation-delay:2s"/>
+        </svg>
+      </div>
+      <div class="container chapter-hero__inner">
+        <a class="chapter-hero__back" href="Chapters.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>All chapters</a>
+        <p class="chapter-hero__eyebrow"><span class="pulse-dot" aria-hidden="true"></span>Hyderabad Chapter · Telangana</p>
+        <h1 class="chapter-hero__title" id="past-hero-title"><span class="line"><span>Past</span></span><span class="line grad"><span>Events</span></span></h1>
+        <p class="chapter-hero__lead">Hyderabad members meet every month to swap notes on AI security. Catch up on the talks, panels and moments so far.</p>
+        <ul class="chapter-hero__stats" aria-label="Chapter at a glance"><li><strong data-count-to="3">0</strong><span>Meetups</span></li><li><strong data-count-to="11">0</strong><span>Talks</span></li><li><strong data-count-to="4">0</strong><span>Panelists</span></li><li><strong data-count-to="3">0</strong><span>Flash mentors</span></li></ul>
+      </div>
+    </section>
+
+    <div class="month-rail">
+      <div class="container">
+        <div class="month-rail__scroller">
+          <nav class="archive-nav" aria-label="Jump to a meetup"><a href="#october-2026"><b>Oct 2026</b><small>Sonatype</small></a><a href="#september-2026"><b>Sep 2026</b><small>Garmin</small></a><a href="#august-2026"><b>Aug 2026</b><small>Draper Startup House</small></a></nav>
+          <span class="month-rail__ind" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hyderabad past events (rendered by js/hyderabad-archive.js) -->
+    <div class="hyd-archive" id="hyd-events" aria-label="Hyderabad past events"></div>
+
+    <section class="chapter-next" aria-labelledby="next-title">
+      <div class="container">
+        <h2 class="chapter-next__title" id="next-title">Explore other chapters</h2>
+        <div class="chapter-next__grid"><a class="chapter-next__link" href="Past_Event.html"><span><span class="chapter-next__city">Bangalore</span><span class="chapter-next__meta">Karnataka</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a><a class="chapter-next__link" href="Chennai%20Past%20Event.html"><span><span class="chapter-next__city">Chennai</span><span class="chapter-next__meta">Tamil Nadu</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a><a class="chapter-next__link" href="Pune%20Past%20Event.html"><span><span class="chapter-next__city">Pune</span><span class="chapter-next__meta">Coming soon</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </section>
+
+  </main>
+
+  <site-footer></site-footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/stats-counter.js" defer></script>
+  <script src="js/event-filters.js" defer></script>
+  <script src="js/forms.js" defer></script>
+  <script src="js/chapter-pages.js" defer></script>
+  <script src="js/hyderabad-archive.js" defer></script>
+
+  <!-- Month jump buttons: scroll straight to the section, whatever the other scripts do -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.archive-nav a').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          var target = document.querySelector(a.getAttribute('href'));
+          if (!target) return;
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.replaceState(null, '', a.getAttribute('href'));
+        });
+      });
+    });
+  </script>
+</body>
+</html>
