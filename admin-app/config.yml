@@ -3,7 +3,7 @@ backend:
   name: github
   repo: testingpurposeguys-prog/AI-SEC-Community-updated   # <-- change this
   branch: main
-  base_url: https://admin-f7xlzb17e-itachi-a208.vercel.app   # <-- ADMIN project URL
+  base_url: https://admin-3tzpy290v-itachi-a208.vercel.app/   # <-- ADMIN project URL
   auth_endpoint: api/auth
 media_folder: "site/Images/uploads"
 public_folder: "/Images/uploads"
